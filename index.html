@@ -1,96 +1,190 @@
 <html lang="ko">
 <head>
-<style>
-*{padding:0;margin:0;}
-.wrap{
-    width:100%;
-    height:100%;
-    background:url('image/background.jpg') ;
-    opacity: 0.5;
-}
-.topmenu{
-    width:100%;
-    height:200px;
-}
-.middle{
-    width:100%;
-    height:300px;
-    text-align:center;
-    padding-top:50px;
-    background:#f4f5f5;
-}
-.middle .center{
-    display:inline-block;
-    margin-right:30px;
-    background:white;
-    width:130px;
-    height:130px;
-    border-radius: 50%;
-    transition:background-color 0.5s;
-    cursor:pointer;
-}
-.middle .center .svg{
-    width:80px;
-    height:80px;
-    text-align: center;
-    margin:0 auto;
-    margin-top:25px;
-}
-.middle .center:hover{
-    background-color:#00aacc;
-}
-.middle .center .svgtext{
-    margin-top:40px;
-}
-</style>
-<script
-src="https://code.jquery.com/jquery-3.4.1.js"
-integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>숭실대학교</title>
+<link rel="shortcut icon" href="images/logo-white.svg">
+<link rel="apple-touch-icon-precomposed" href="images/logo-white.svg">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/flexslider.css">
+<link rel="stylesheet" href="css/main.css">
+<link href="css/middle.css" rel="stylesheet">
+<link href="css/tab1.css" rel="stylesheet">
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
 <script>
-
+$('.tab .menu1').click(function(){
+    $(this).addClass('on')
+    $('.tab .menu2').removeClass('on')
+    $('.menu1_sub').addClass('menu_on')
+    $('.menu2_sub').removeClass('menu_on')
+})
+$('.tab .menu2').click(function(){
+    $(this).addClass('on')
+    $('.tab .menu1').removeClass('on')
+    $('.menu2_sub').addClass('menu_on')
+    $('.menu1_sub').removeClass('menu_on')
+})
 </script>
 </head>
 <body>
+<header>
+            <nav class="tnav">
+				<ul>
+					<li class="login"><a href="#" title="로그인 페이지 바로가기">로그인</a></li>
+					<li class="join"><a href="#" title="회원가입 페이지 바로가기">회원가입</a></li>
+					<li class="insta"><a href="#" title="인스타그램 바로가기">인스타그램</a></li>
+					<li class="facebook"><a href="#" title="페이스북 바로가기">페이스북</a></li>
+				</ul>
+			</nav>
+            <div class="hWrap">
+                <h1>
+                    <a href="index.html" title="숭실대학교 바로가기">
+                        <!--pc-->
+                        <img src="images/logo-white.svg" alt="숭실대학교" class="pc">
+                        <!--pc2-scroll-->
+                        <img src="images/logo-white.svg" alt="숭실대학교" class="pc2">
+                        <!--mobile-->
+                        <img src="images/logo-white.svg" alt="숭실대학교" class="mobile">
+                    </a>
+                </h1>
+                <div class="mobileBtn">
+                    <a href="#" title="메인메뉴보기">
+                        <span class="line01"></span>
+                        <span class="line02"></span>
+                        <span class="line03"></span>
+                    </a>
+                </div>
+                <nav class="mNav"><!--PC용 메인네비-->
+                    <ul>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">입학안내</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">신입학</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">편입학</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">시간제등록</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">입학상담</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">학과소개</a>
+                        </li>
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">학교소개</a>
+                        </li>                                                   
+                        <li>
+                            <a href="#" title="하위메뉴보기" class="topNav">나의지원관리</a>
+                        </li>
+                        <li class="last">
+                            <a href="#" title="하위메뉴보기" class="topNav">전체메뉴</a>
+                            <ul class="subNav">
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                                <li><a href="#" title="123">123</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+<div class="tab_wrap">
+    <div class="tab">
+        <a href="#none" class="menu menu1 on">입학지원절차</a>
+        <a href="#none" class="menu menu2">나의지원관리</a>
+    </div>
+    <ul class="menu_sub menu1_sub menu_on">
+        <li><a href="#none">
+            <strong class="li_num">STEP01</strong>
+            <span class="li_text">모집요강확인</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+        <li><a href="#none">
+            <strong class="li_num">STEP02</strong>
+            <span class="li_text">입학원서작성</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+        <li><a href="#none">
+            <strong class="li_num">STEP03</strong>
+            <span class="li_text">전형료 납부</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+        <li><a href="#none">
+            <strong class="li_num">STEP04</strong>
+            <span class="li_text">학업계획서 작성(시간제외)</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+        <li><a href="#none">
+            <strong class="li_num">STEP05</strong>
+            <span class="li_text">적성검사 작성</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+        <li><a href="#none">
+            <strong class="li_num">STEP06</strong>
+            <span class="li_text">증빙서류제출</span>
+            <span class="li_arr">열기</span>
+        </a></li>
+    </ul>
+    <div class="menu_sub menu2_sub">
+        <input type="text" class="inp" placeholder="수험번호 입력"/>
+        <input type="text" class="inp" placeholder="비밀번호 입력"/>
+        <button tpye="submit">로그인</button>
+        <ul class="p_sub">
+            <li><a href="#none">수험번호 찾기</a></li>
+            <li><a href="#none">비밀번호 초기화</a></li>
+        </ul>
+    </div>
+</div>
 <div class="wrap">
     <div class="topmenu"></div>
 </div>
 <div class="middle">
     <div class="center">
         <div class="svg">
-            <img src="image/sprite-icon2-07-01.svg"  alt="위탁교육협약신청" />
+            <img src="images/sprite-icon2-07-01.svg"  alt="위탁교육협약신청" />
         </div>
         <div class="svgtext">위탁교육협약신청</div>
     </div>
     
     <div class="center border-round bg-white">
             <div class="svg">
-            <img src="image/sprite-icon2-04-01.svg"  alt="입학자료신청">
+            <img src="images/sprite-icon2-04-01.svg"  alt="입학자료신청">
             </div>
             <div class="svgtext">입학자료신청</div>
     </div>
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-01-01.svg"  alt="입학일정"></div>
+            <div class="svg"><img src="images/sprite-icon2-01-01.svg"  alt="입학일정"></div>
             <div class="svgtext">입학일정</div>
     </div> 
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-02-01.svg" alt="전형별비교"></div>
+            <div class="svg"><img src="images/sprite-icon2-02-01.svg" alt="전형별비교"></div>
             <div class="svgtext">전형별비교</div>
     </div> 
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-03-01.svg" alt="자격증안내"></div>
+            <div class="svg"><img src="images/sprite-icon2-03-01.svg" alt="자격증안내"></div>
             <div class="svgtext">자격증안내</div>
     </div> 
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-05-01.svg" alt="대학생활안내"></div>
+            <div class="svg"><img src="images/sprite-icon2-05-01.svg" alt="대학생활안내"></div>
             <div class="svgtext">대학생활안내</div>
     </div> 
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-06-01.svg"  alt="대학브로슈어"></div>
+            <div class="svg"><img src="images/sprite-icon2-06-01.svg"  alt="대학브로슈어"></div>
             <div class="svgtext">대학브로슈어</div>
     </div>
     <div class="center">
-            <div class="svg"><img src="image/sprite-icon2-08-01.svg"  alt="원격상담"></div>
+            <div class="svg"><img src="images/sprite-icon2-08-01.svg"  alt="원격상담"></div>
             <div class="svgtext">원격상담</div>
     </div>
 </div>
